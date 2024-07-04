@@ -1,0 +1,24 @@
+{
+  "name": "devcamp-course365",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "start": "nodemon sever.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/devcamp120.j2225/exercise/thinhnd/06-09-2022/homework/devcamp-course365.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/devcamp120.j2225/exercise/thinhnd/06-09-2022/homework/devcamp-course365/issues"
+  },
+  "homepage": "https://gitlab.com/devcamp120.j2225/exercise/thinhnd/06-09-2022/homework/devcamp-course365#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.4"
+  }
+}

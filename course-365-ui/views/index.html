@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course 365 - Learning with unlimited!</title>
+
+  <!-- Nhúng các thư viện BS4 & jQuery, awesome font -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Các file css và js tự định nghĩa thêm -->
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+  <div class="container-fluid pr-0 pl-0 bg-light">
+
+    <!-- 1. Header - Navbar menu -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top header-navbar">
+      <a class="navbar-brand" href="#">
+        <img src="./images/Ionic_logo.png" alt="">
+      </a>
+      <!-- Hiện nút 3 gạch -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Browser courses
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              About us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline">
+            <div class="">
+              <div class="input-group-prepend search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input class="form-control mr-sm-2 inp-search" type="search" placeholder="Search" aria-label="Search">
+            </div>
+          </form>
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <!-- 2. Slide body -->
+    <div class="container-fluid slide-body">
+      <div class="container">
+        <div class="d-flex justify-content-between header">
+
+          <div class="header-content">
+            <div class="header-tit">
+              <h1 class="text-white">Welcome to linic Course365 Learning Center</h1>
+            </div>
+            <div class="mt-3 header-discription" style="color: #95d9e5">
+              lonic Course365 is an online learning and teaching marketplacee with over
+              5000 courss and 1 millinon students. Instructor and expertly crafted courses,
+              designed for the modern students and entrepreneur
+            </div>
+
+            <div class="mt-3 text-left header-button">
+              <button class="btn btn-warning btn-header-first mr-2">Browse Courses</button>
+              <button class="btn btn-light btn-header-second">Become an Instructor</button>
+            </div>
+          </div>
+
+          <div class="header-img">
+            <img class="img-hero" src="./images/ionic-207965.png" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Courses content -->
+    <div class="container-fluid pt-5">
+
+      <div class="container course-content">
+        <h2 class="pb-4">Recommended to you</h2>
+        <!-- card -->
+        <div class="group-card d-flex flex-col flex-wrap">
+          <!-- card 1-->
+          <div class="card card-item card-items mt-4" style="">
+            <img class="card-img-top" src="./images/courses/course-angular.jpg" alt="Card image cap">
+            <div class="card-body">
+              <a class="card-title">How to easily create a website with Angular</a>
+              <p class="card-text" style="margin-top: 1rem"><i class="fa-regular fa-clock"></i>&nbsp; 3h 56m Beginner
+              </p>
+              <p class="card-text"><b>$600 </b><del class="text-secondary">$750</del></p>
+            </div>
+            <div class="card-footer" style="display: flex; flex-direction: row; align-items: center;">
+              <img class=".rounded-circle" style="height: 36px; border-radius: 50%;"
+                src="./images/teacher/morris_mccoy.jpg" alt="">
+              <small class="text-muted" style="margin-right: auto; padding-left: 10px;">&nbsp;Morris Mccoy</small>
+              <i class="fa-regular fa-bookmark"></i>
+            </div>
+          </div>
+          <!-- card 2-->
+          <div class="card card-item card-items mt-4" style="">
+            <img class="card-img-top" src="./images/courses/course-python.jpg" alt="Card image cap">
+            <div class="card-body">
+              <a class="card-title">The Python Course: build web application</a>
+              <p class="card-text" style="margin-top: 1rem"><i class="fa-regular fa-clock"></i>&nbsp; 4h 30m Advanced
+              </p>
+              <p class="card-text"><b>$900 </b><del class="text-secondary">$1050</del></p>
+            </div>
+            <div class="card-footer" style="display: flex; flex-direction: row; align-items: center;">
+              <img class=".rounded-circle" style="height: 36px; border-radius: 50%;"
+                src="./images/teacher/claire_robertson.jpg" alt="">
+              <small class="text-muted" style="margin-right: auto; padding-left: 10px;">&nbsp;Claire Robertson</small>
+              <i class="fa-regular fa-bookmark"></i>
+            </div>
+          </div>
+          <!-- card 3-->
+          <div class="card card-item card-items mt-4" style="">
+            <img class="card-img-top" src="./images/courses/course-graphql.jpg" alt="Card image cap">
+            <div class="card-body">
+              <a class="card-title">GraphQL: introduction graphQL for beginners</a>
+              <p class="card-text" style="margin-top: 1rem"><i class="fa-regular fa-clock"></i>&nbsp; 2h 15m
+                intermediate
+              </p>
+              <p class="card-text"><b>$650 </b><del class="text-secondary">$850</del></p>
+            </div>
+            <div class="card-footer" style="display: flex; flex-direction: row; align-items: center;">
+              <img class=".rounded-circle" style="height: 36px; border-radius: 50%;"
+                src="./images/teacher/ted_hawkins.jpg" alt="">
+              <small class="text-muted" style="margin-right: auto; padding-left: 10px;">&nbsp;Ted Hawkins</small>
+              <i class="fa-regular fa-bookmark"></i>
+            </div>
+          </div>
+          <!-- card 4-->
+          <div class="card card-item card-items mt-4" style="">
+            <img class="card-img-top" src="./images/courses/course-javascript.jpg" alt="Card image cap">
+            <div class="card-body">
+              <a class="card-title">Getting started with javaScript</a>
+              <p class="card-text" style="margin-top: 1rem"><i class="fa-regular fa-clock"></i>&nbsp; 3h 56m Beginner
+              </p>
+              <p class="card-text"><b>$300 </b><del class="text-secondary">$550</del></p>
+            </div>
+            <div class="card-footer" style="display: flex; flex-direction: row; align-items: center;">
+              <img class=".rounded-circle" style="height: 36px; border-radius: 50%;"
+                src="./images/teacher/ted_hawkins.jpg" alt="">
+              <small class="text-muted" style="margin-right: auto; padding-left: 10px;">&nbsp;Ted Hawkins</small>
+              <i class="fa-regular fa-bookmark"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Most popular -->
+      <div class="container most-popular pt-5">
+        <h2 class="mb-4">Most popular</h2>
+
+        <!-- card -->
+        <div class="group-card most-popular-card d-flex flex-col flex-wrap">
+          <!-- render bằng js -->
+        </div>
+      </div>
+
+      <!-- Trending -->
+      <div class="container trending pt-5">
+        <h2 class="mb-4">Trending</h2>
+        <!-- card -->
+        <div class="group-card trending-cards d-flex flex-col flex-wrap">
+          <!-- render bằng js -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4. Footer -->
+    <div class="container mt-3 mb-2">
+      <div class="mr-4 footer">
+        <div class="footer-copyright">
+          <p>© 2021 lonic Course365. All Rights Reserved.</p>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li><a class="" href="#">Privacy</a></li>
+            <li><a class="" href="#">Tearms</a></li>
+            <li><a class="" href="#">Feedback</a></li>
+            <li><a class="" href="#">Support</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    "use strict";
+    var gCoursesDB = {
+      description: "This DB includes all courses in system",
+      courses: [
+        {
+          id: 1,
+          courseCode: "FE_WEB_ANGULAR_101",
+          courseName: "How to easily create a website with Angular",
+          price: 750,
+          discountPrice: 600,
+          duration: "3h 56m",
+          level: "Beginner",
+          coverImage: "images/courses/course-angular.jpg",
+          teacherName: "Morris Mccoy",
+          teacherPhoto: "images/teacher/morris_mccoy.jpg",
+          isPopular: false,
+          isTrending: true
+        },
+        {
+          id: 2,
+          courseCode: "BE_WEB_PYTHON_301",
+          courseName: "The Python Course: build web application",
+          price: 1050,
+          discountPrice: 900,
+          duration: "4h 30m",
+          level: "Advanced",
+          coverImage: "images/courses/course-python.jpg",
+          teacherName: "Claire Robertson",
+          teacherPhoto: "images/teacher/claire_robertson.jpg",
+          isPopular: false,
+          isTrending: true
+        },
+        {
+          id: 5,
+          courseCode: "FE_WEB_GRAPHQL_104",
+          courseName: "GraphQL: introduction to graphQL for beginners",
+          price: 850,
+          discountPrice: 650,
+          duration: "2h 15m",
+          level: "Intermediate",
+          coverImage: "images/courses/course-graphql.jpg",
+          teacherName: "Ted Hawkins",
+          teacherPhoto: "images/teacher/ted_hawkins.jpg",
+          isPopular: true,
+          isTrending: false
+        },
+        {
+          id: 6,
+          courseCode: "FE_WEB_JS_210",
+          courseName: "Getting Started with JavaScript",
+          price: 550,
+          discountPrice: 300,
+          duration: "3h 34m",
+          level: "Beginner",
+          coverImage: "images/courses/course-javascript.jpg",
+          teacherName: "Ted Hawkins",
+          teacherPhoto: "images/teacher/ted_hawkins.jpg",
+          isPopular: true,
+          isTrending: true
+        },
+        {
+          id: 8,
+          courseCode: "FE_WEB_CSS_111",
+          courseName: "CSS: ultimate CSS course from beginner to advanced",
+          price: 750,
+          discountPrice: 600,
+          duration: "3h 56m",
+          level: "Beginner",
+          coverImage: "images/courses/course-javascript.jpg",
+          teacherName: "Juanita Bell",
+          teacherPhoto: "images/teacher/juanita_bell.jpg",
+          isPopular: true,
+          isTrending: true
+        },
+        {
+          id: 14,
+          courseCode: "FE_WEB_WORDPRESS_111",
+          courseName: "Complete Wordpress themes & plugins",
+          price: 1050,
+          discountPrice: 900,
+          duration: "4h 30m",
+          level: "Advanced",
+          coverImage: "images/courses/course-wordpress.jpg",
+          teacherName: "Clevaio Simon",
+          teacherPhoto: "images/teacher/clevaio_simon.jpg",
+          isPopular: true,
+          isTrending: false
+        }
+      ]
+    }
+
+    $(document).ready(function () {
+      // lọc các kháo học thuộc popular
+      var vMostPopularCourses = gCoursesDB.courses.filter(item => {
+        return item.isPopular == true
+      })
+
+      // Lọc các khóa học thuộc trending
+      var vTrendingCourses = gCoursesDB.courses.filter(item => {
+        return item.isTrending == true
+      })
+
+      // gọi hàm render khóa học ra giao diện
+      loadCourse(vMostPopularCourses, '.most-popular-card');
+      loadCourse(vTrendingCourses, '.trending-cards');
+
+    })
+
+    // Hàm render khóa học ra giao diện
+    function loadCourse(paramCheckCourse, paramElement) {
+      for (let bI = 0; bI < paramCheckCourse.length; bI++) {
+
+        $(paramElement).append(
+          `<div class="card card-item card-items mt-4">
+            <img class="card-img-top" src="${paramCheckCourse[bI].coverImage}" alt="Card image cap">
+            <div class="card-body">
+            <a class="card-title">${paramCheckCourse[bI].courseName}</a>
+            <p class="card-text" style="margin-top: 1rem"><i class="fa-regular fa-clock"></i>&nbsp; ${paramCheckCourse[bI].duration} ${paramCheckCourse[bI].level}
+            </p>
+            <p class="card-text"><b>${paramCheckCourse[bI].discountPrice} </b><del class="text-secondary">${paramCheckCourse[bI].price}</del></p>
+            </div>
+            <div class="card-footer" style="display: flex; flex-direction: row; align-items: center;">
+            <img class=".rounded-circle" style="height: 36px; border-radius: 50%;"
+                src="${paramCheckCourse[bI].teacherPhoto}" alt="">
+            <small class="text-muted" style="margin-right: auto; padding-left: 10px;">&nbsp;${paramCheckCourse[bI].teacherName}</small>
+            <i class="fa-regular fa-bookmark"></i>
+            </div>
+        </div>`
+        )
+
+      }
+    }
+  </script>
+</body>
+
+</html>

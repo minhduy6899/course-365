@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Code đã sữa -->
+<!-- Sửa code lần nữa -->
+<head>
+  <title>Quản lý khóa học</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Import Datatable sau jquery -->
+  <!-- Import them style bootstrap cho datatable -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+  <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+  
+</head>
+
+<body onload="onPageLoading()">
+  <div class="container-fluid mt-5">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 text-center">
+        <h3>QUẢN LÝ DANH SÁCH</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 text-center">
+        <button class="btn btn-success" type="button" id="btn-adduser">Add course</button>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <table class="table table-striped table-bordered table-hover" id="table-courses">
+        <thead>
+          <th>id</th>
+          <th>Course Code</th>
+          <th>Course Name</th>
+          <th>Price</th>
+          <th>Discout Price</th>
+          <th>Duration</th>
+          <th>Level</th>
+          <th>Cover Image</th>
+          <th>Teacer name</th>
+          <th>Teacher Photo</th>
+          <th>Action</th>
+        </thead>
+
+        <tbody></tbody>
+        </tab>
+    </div>
+    <!-- modal add user -->
+    <div id="insert-user-modal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Thêm user</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <label for="">CourseCode</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: FE_WEB_GRAPHQL_104..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">CourseName</label>
+                <input name="inp-add-course" id="" class="form-control" required
+                  placeholder="EX: GraphQL: introduction to graphQL for beginners..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Price</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: 850..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Discount Price</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: 650..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Duration</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: 2h 15m..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Level</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: Intermediate..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Cover Image</label>
+                <input name="inp-add-course" id="" class="form-control" required
+                  placeholder="EX: images/courses/course-graphql.jpg..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Teacher name</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: Ted Hawkins..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Teacher photo</label>
+                <input name="inp-add-course" id="" class="form-control" required
+                  placeholder="EX: images/teacher/ted_hawkins.jpg..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Is Popular</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: true..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Is Trending</label>
+                <input name="inp-add-course" id="" class="form-control" required placeholder="EX: false..">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" id="btn-insert-user">Insert User</button>
+            <button class="btn btn-secondary" id="btn-insert-cancel" data-dismiss="modal">Hủy bỏ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal edit user -->
+    <div id="edit-user-modal" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Sửa user</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <label for="">CourseCode</label>
+                <input name="inp-update-course" id="" class="form-control" required
+                  placeholder="EX: FE_WEB_GRAPHQL_104..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">CourseName</label>
+                <input name="inp-update-course" id="" class="form-control" required
+                  placeholder="EX: GraphQL: introduction to graphQL for beginners..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Price</label>
+                <input name="inp-update-course" id="" class="form-control" required placeholder="EX: 850..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Discount Price</label>
+                <input name="inp-update-course" id="" class="form-control" required placeholder="EX: 650..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Duration</label>
+                <input name="inp-update-course" id="" class="form-control" required placeholder="EX: 2h 15m..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Level</label>
+                <input name="inp-update-course" id="" class="form-control" required placeholder="EX: Intermediate..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Cover Image</label>
+                <input name="inp-update-course" id="" class="form-control" required
+                  placeholder="EX: images/courses/course-graphql.jpg..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Teacher name</label>
+                <input name="inp-update-course" id="" class="form-control" required placeholder="EX: Ted Hawkins..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Teacher photo</label>
+                <input name="inp-update-course" id="" class="form-control" required
+                  placeholder="EX: images/teacher/ted_hawkins.jpg..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Is Popular</label>
+                <input name="inp-update-course" id="" class="form-control" required placeholder="EX: true..">
+              </div>
+              <div class="col-sm-12">
+                <label for="">Is Trending</label>
+                <input name="inp-update-course" id="" class="form-control" required placeholder="EX: false..">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary" id="btn-update-user">Update User</button>
+            <button class="btn btn-secondary" id="btn-update-cancel" data-dismiss="modal">Hủy bỏ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal confirm delete -->
+    <div>
+      <div class="modal fade" tabindex="-1" id="delete-confirm-modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="h5-modal-title">User Delete Confirmation</h5>
+              <button class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <label>Bạn có chắc chắn muốn xóa User này không?</label>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" id="btn-confirm-delete-voucher">Confirm</button>
+              <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
